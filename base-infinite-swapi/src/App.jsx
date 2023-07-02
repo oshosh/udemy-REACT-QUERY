@@ -1,9 +1,9 @@
 import './App.css';
 
-import { QueryClient, QueryClientProvider } from 'react-query';
-import { ReactQueryDevtools } from 'react-query/devtools';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { InfinitePeople } from './people/InfinitePeople';
 import { InfiniteSpecies } from './species/InfiniteSpecies';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 const queryClient = new QueryClient();
 
