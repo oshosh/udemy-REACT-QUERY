@@ -3,7 +3,10 @@
     "target": "es5",
     "module": "esnext",
     "moduleResolution": "node",
-    "baseUrl": "src",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
     "esModuleInterop": true,
     "sourceMap": true,
     "emitDecoratorMetadata": true,
@@ -26,5 +29,5 @@
     "downlevelIteration": true,
     "strict": true
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "node_modules/@types"]
+  "include": ["src", "src/**/*.ts", "src/**/*.tsx", "node_modules/@types"]
 }
