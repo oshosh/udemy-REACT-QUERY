@@ -6,6 +6,7 @@ import { AllStaff } from '../staff/AllStaff';
 import { Treatments } from '../treatments/Treatments';
 import { Signin } from '../user/Signin';
 import { UserProfile } from '../user/UserProfile';
+
 import { Home } from './Home';
 
 export function Routes(): ReactElement {

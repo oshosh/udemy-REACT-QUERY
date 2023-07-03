@@ -1,9 +1,9 @@
+import { MemoryRouter } from 'react-router-dom';
 import {
   fireEvent,
   screen,
   waitForElementToBeRemoved,
 } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
 
 import { mockUser } from '../../../mocks/mockData';
 // import { renderWithQueryClient } from '../../../test-utils';

@@ -1,9 +1,10 @@
+import { ReactElement } from 'react';
 import { Box, HStack, Text } from '@chakra-ui/react';
 import dayjs from 'dayjs';
-import { ReactElement } from 'react';
 
 import { Appointment as AppointmentType, User } from '../../../../shared/types';
 import { useUser } from '../user/hooks/useUser';
+
 import { useReserveAppointment } from './hooks/useReserveAppointment';
 import { appointmentInPast, getAppointmentColor } from './utils';
 

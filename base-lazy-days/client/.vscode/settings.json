@@ -1,6 +1,65 @@
 {
   "eslint.workingDirectories": ["client"],
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  }
+  // vscode theme settings
+  "workbench.colorTheme": "One Dark Pro",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.tokenColorCustomizations": {
+    "comments": "#777777"
+  },
+
+  // D2Coding & font settings
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "D2Coding, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 15,
+
+  // terminal fontSize setting
+  "terminal.integrated.fontSize": 13,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": true,
+
+  // eslint & prettier
+  "eslint.options": {
+    "overrideConfigFile": ".eslintrc.json"
+  },
+  "eslint.enable": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "editor.formatOnSave": true
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "editor.formatOnSave": true
+  },
+  "prettier.configPath": ".prettierrc.json",
+  "eslint.useESLintClass": true,
+  "editor.tabSize": 2,
+  "files.eol": "\n",
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

@@ -1,3 +1,5 @@
+import { ReactElement, useState } from 'react';
+import { Redirect } from 'react-router-dom';
 import {
   Box,
   Button,
@@ -10,10 +12,9 @@ import {
   Input,
   Stack,
 } from '@chakra-ui/react';
-import { ReactElement, useState } from 'react';
-import { Redirect } from 'react-router-dom';
 
 import { useAuth } from '../../auth/useAuth';
+
 import { useUser } from './hooks/useUser';
 
 // eslint-disable-next-line max-lines-per-function

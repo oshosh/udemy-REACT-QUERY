@@ -1,5 +1,5 @@
-import { Image } from '@chakra-ui/react';
 import { ReactElement } from 'react';
+import { Image } from '@chakra-ui/react';
 
 import splashImg from '../../images/splash.jpg';
 

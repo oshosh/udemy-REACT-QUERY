@@ -9,6 +9,7 @@
     "@chakra-ui/theme-tools": "^1.1.7",
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
+    "@tanstack/react-query": "^4.29.19",
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
     "@testing-library/react-hooks": "^5.1.2",
@@ -53,7 +54,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix"
   },
   "browserslist": {
     "production": [
@@ -69,5 +72,9 @@
   },
   "jest": {
     "resetMocks": false
+  },
+  "devDependencies": {
+    "@tanstack/eslint-plugin-query": "^4.29.9",
+    "@tanstack/react-query-devtools": "^4.29.19"
   }
 }

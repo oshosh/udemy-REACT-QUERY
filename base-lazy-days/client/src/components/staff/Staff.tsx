@@ -1,5 +1,5 @@
-import { Text } from '@chakra-ui/react';
 import { ReactElement } from 'react';
+import { Text } from '@chakra-ui/react';
 
 import type { Staff as StaffType } from '../../../../shared/types';
 import { Card } from '../common/Card';

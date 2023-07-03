@@ -1,7 +1,7 @@
-import { Box, Button, Flex, HStack, Icon, Link } from '@chakra-ui/react';
 import { ReactElement, ReactNode } from 'react';
 import { GiFlowerPot } from 'react-icons/gi';
 import { Link as RouterLink, useHistory } from 'react-router-dom';
+import { Box, Button, Flex, HStack, Icon, Link } from '@chakra-ui/react';
 
 import { useAuth } from '../../auth/useAuth';
 import { useUser } from '../user/hooks/useUser';

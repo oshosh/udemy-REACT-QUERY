@@ -1,12 +1,12 @@
 {
   "extends": [
-    "airbnb",
     "plugin:testing-library/react",
     "plugin:@typescript-eslint/recommended",
     "react-app",
     "react-app/jest",
     "plugin:jsx-a11y/recommended",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:@tanstack/eslint-plugin-query/recommended"
   ],
   "settings": {
     "import/resolver": {
@@ -30,7 +30,8 @@
     "jsx-a11y",
     "@typescript-eslint",
     "simple-import-sort",
-    "prettier"
+    "prettier",
+    "@tanstack/query"
   ],
   "env": {
     "browser": true,
@@ -38,7 +39,36 @@
     "es6": true,
     "jest": true
   },
+  "overrides": [
+    // override "simple-import-sort" config
+    {
+      "files": ["*.js", "*.jsx", "*.ts", "*.tsx"],
+      "rules": {
+        "simple-import-sort/imports": [
+          "error",
+          {
+            "groups": [
+              // Packages `react` related packages come first.
+              ["^react", "^@?\\w"],
+              // Internal packages.
+              ["^(@|components)(/.*|$)"],
+              // Side effect imports.
+              ["^\\u0000"],
+              // Parent imports. Put `..` last.
+              ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+              // Other relative imports. Put same-folder imports and `.` last.
+              ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+              // Style imports.
+              ["^.+\\.?(css)$"]
+            ]
+          }
+        ]
+      }
+    }
+  ],
   "rules": {
+    "@tanstack/query/exhaustive-deps": "error",
+    "@tanstack/query/prefer-query-object-syntax": "error",
     "import/no-extraneous-dependencies": [2, { "devDependencies": true }],
     "testing-library/await-async-query": "error",
     "testing-library/no-await-sync-query": "error",

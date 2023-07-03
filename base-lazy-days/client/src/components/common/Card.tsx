@@ -1,3 +1,4 @@
+import { ReactElement, ReactNode } from 'react';
 import {
   Box,
   Center,
@@ -7,7 +8,6 @@ import {
   Stack,
   Text,
 } from '@chakra-ui/react';
-import { ReactElement, ReactNode } from 'react';
 
 import type { Image as ImageType } from '../../../../shared/types';
 import { baseImageUrl } from '../../axiosInstance/constants';
