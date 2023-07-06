@@ -10,7 +10,8 @@
   ],
   "settings": {
     "import/parsers": {
-      "@typescript-eslint/parser": [".ts", ".tsx"]
+      "@typescript-eslint/parser": [".ts", ".tsx"],
+      "typescript": {}
     },
     "import/resolver": {
       "node": {
@@ -101,6 +102,8 @@
     "react-hooks/exhaustive-deps": "warn",
     "react/no-array-index-key": "off",
     "react/react-in-jsx-scope": "off",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
     "prettier/prettier": [
       "error",
       {
