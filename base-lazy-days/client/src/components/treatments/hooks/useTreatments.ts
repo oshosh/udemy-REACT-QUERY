@@ -16,7 +16,7 @@ export function useTreatments(): Treatment[] {
     queryKey: [queryKeys.treatments],
     queryFn: getTreatments,
     meta: {
-      errorMessage: 'error connection to the server',
+      errorMessage: 'error connection to the server (treatment)',
     },
   });
 
