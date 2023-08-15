@@ -59,11 +59,20 @@ export function Calendar(): ReactElement {
           appointments={appointments[1]}
         />
         {/* the rest of the days will follow */}
-        {[...Array(monthYear.lastDate)].map((_, i) =>
-          i > 0 ? (
-            <DateBox key={i} date={i + 1} appointments={appointments[i + 1]} />
-          ) : null,
-        )}
+        {/* 31 혹은 30에 해당 하는 빈 배열 생성 */}
+        {[...Array(monthYear.lastDate)].map((_, i) => {
+          if (i > 0) {
+            return (
+              <DateBox
+                key={i}
+                date={i + 1}
+                appointments={appointments[i + 1]}
+              />
+            );
+          } else {
+            return null;
+          }
+        })}
       </Grid>
       <UserAppointments />
     </Box>
